@@ -1,1 +1,2 @@
-alert("Webpack is working");
+(()=>{"use strict";const e=e=>{document.querySelector("#content").appendChild(e)},t=[{name:"menuItem1",description:"",ingredients:[],image:""},{name:"menuItem2",description:"",ingredients:[],image:""}];document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("[data-action]").forEach((n=>{const c=n.dataset.action;n.addEventListener("click",(()=>{switch(c){case"about":break;case"menu":e((()=>{const e=document.createElement("div");return t.forEach((e=>{})),e})());break;case"contact":e(document.createElement("div"))}}))}))}))})();
+//# sourceMappingURL=main.js.map
