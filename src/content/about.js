@@ -1,5 +1,7 @@
 import render from '../functions/renderContent';
 
-export default about = () => {
+const about = () => {
 
 }
+
+export default about;

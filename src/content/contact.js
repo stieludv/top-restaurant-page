@@ -1,5 +1,15 @@
 import render from '../functions/renderContent';
 
-export default contact = () => {
-    
+
+const createContact = () => {
+    const contactDiv = document.createElement("div");
+
+    return contactDiv;
 }
+
+
+const displayContact = () => {
+    render(createContact());
+}
+
+export default displayContact;
