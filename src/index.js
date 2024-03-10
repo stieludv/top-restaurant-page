@@ -1,6 +1,6 @@
 import aboutContent from './content/about';
 import menuContent from './content/menu';
-import contactContent from './content/contact'
+import contactContent from './content/contact';
 
 document.addEventListener('DOMContentLoaded', () => {
     const changePageButtons = document.querySelectorAll("[data-action]");
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener("click", () => {
             switch (action) {
                 case "about":
+                    
                     aboutContent();
                     break;
                 case "menu":

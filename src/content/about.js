@@ -1,7 +1,13 @@
 import render from '../functions/renderContent';
 
-const about = () => {
+const createAbout = () => {
+    const aboutContainer = document.createElement("div");
 
+    return aboutContainer;
 }
 
-export default about;
+const displayAbout = () => {
+    render(createAbout());
+}
+
+export default displayAbout;

@@ -3,26 +3,44 @@ import render from '../functions/renderContent';
 const menuItems = [
     {
         name: "menuItem1",
-        description: "",
+        description: "description of menuItem1",
         ingredients: [],
-        image: ""
+        image: "food.avif"
     },
     {
         name: "menuItem2",
-        description: "",
+        description: "description of menuItem2",
         ingredients: [],
-        image: ""
+        image: "food.avif"
     },
 ]
 
 const createMenu = () => {
     const menuDiv = document.createElement("div");
 
-    menuItems.forEach(element => {
-        // Create a container
-            // Contains Image
-            // Contains Name
-            // Contains ingredients
+    menuItems.forEach(menuItem => {
+        const itemContainer = document.createElement("div");
+
+        // Create and append image
+        const image = document.createElement("img");
+        // image.setAttribute("src", require(`images/${menuItem.image}`));
+        image.setAttribute("src", require("static/food.avif"));
+        itemContainer.appendChild(image);
+
+        // Create and append name
+        const name = document.createElement("p");
+        const nameText = document.createTextNode(menuItem.name);
+        name.appendChild(nameText);
+        itemContainer.appendChild(name);
+
+        // Create and append description
+        const description = document.createElement("p");
+        const descriptionText = document.createTextNode(menuItem.description);
+        description.appendChild(descriptionText);
+        itemContainer.appendChild(description);
+
+        // Append item to menu
+        menuDiv.appendChild(itemContainer);
     });
 
     return menuDiv;
