@@ -17,18 +17,20 @@ const menuItems = [
 
 const createMenu = () => {
     const menuDiv = document.createElement("div");
+    menuDiv.classList.add("menu-item-container");
 
     menuItems.forEach(menuItem => {
         const itemContainer = document.createElement("div");
+        itemContainer.classList.add("menu-item");
 
         // Create and append image
         const image = document.createElement("img");
-        // image.setAttribute("src", require(`images/${menuItem.image}`));
-        image.setAttribute("src", require("static/food.avif"));
+        image.setAttribute("src", require(`../../static/${menuItem.image}`));
         itemContainer.appendChild(image);
 
         // Create and append name
         const name = document.createElement("p");
+        name.classList.add("menu-item-name");
         const nameText = document.createTextNode(menuItem.name);
         name.appendChild(nameText);
         itemContainer.appendChild(name);
