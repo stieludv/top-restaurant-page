@@ -1,15 +1,20 @@
 
 body {
     margin: 0;
-    background-image: url(../static/food.avif);
+    background-image: url(../static/restaurant.avif);
     background-size: cover;
     backdrop-filter: blur(10px) brightness(50%);
     height: 100vh;
     color: white;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+nav button {
+    cursor: pointer;
 }
 
 button[data-action] {
-    cursor: pointer;
     border-radius: 5px;
     border-style: solid;
     border-color: rgb(50,50,50);
@@ -25,6 +30,21 @@ button:hover {
 button:active {
     background-color: rgb(100,100,100);
     border-color: rgb(100, 100, 100);
+}
+
+.current-content-button {
+    cursor: not-allowed;
+    filter: brightness(70%);
+}
+
+.current-content-button:hover {
+    background-color: black;
+    border-color: rgb(50, 50, 50);
+}
+
+.current-content-button:active {
+    background-color: black;
+    border-color: rgb(50, 50, 50);
 }
 
 nav {
@@ -58,6 +78,12 @@ nav button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: calc(100vh - 300px);
+    overflow-y: scroll;
+}
+
+#content::-webkit-scrollbar {
+    display: none;
 }
 
 .menu-item-container {
@@ -76,4 +102,23 @@ nav button {
 .menu-item-name {
     font-size: 120%;
     font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .restaurant-name {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+    }
+
+    #content {
+        max-height: calc(100vh - 100px - 200px - 20px - 20px);
+    }
 }
