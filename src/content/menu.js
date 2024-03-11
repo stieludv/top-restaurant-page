@@ -13,6 +13,42 @@ const menuItems = [
         ingredients: [],
         image: "food.avif"
     },
+    {
+        name: "menuItem3",
+        description: "description of menuItem3",
+        ingredients: [],
+        image: "food.avif"
+    },
+    {
+        name: "menuItem4",
+        description: "description of menuItem4",
+        ingredients: [],
+        image: "food.avif"
+    },
+    {
+        name: "menuItem5",
+        description: "description of menuItem5",
+        ingredients: [],
+        image: "food.avif"
+    },
+    {
+        name: "menuItem6",
+        description: "description of menuItem6",
+        ingredients: [],
+        image: "food.avif"
+    },
+    {
+        name: "menuItem7",
+        description: "description of menuItem7",
+        ingredients: [],
+        image: "food.avif"
+    },
+    {
+        name: "menuItem8",
+        description: "description of menuItem8",
+        ingredients: [],
+        image: "food.avif"
+    },
 ]
 
 const createMenu = () => {

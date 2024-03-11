@@ -2,6 +2,8 @@ import './style.css'
 import aboutContent from './content/about';
 import menuContent from './content/menu';
 import contactContent from './content/contact';
+import updateActiveButton from './functions/updateActiveButton';
+import onPageLoad from './functions/onPageLoad';
 
 
 const nav = document.querySelector("nav");
@@ -16,10 +18,9 @@ const changePageButtons = document.querySelectorAll("[data-action]");
 changePageButtons.forEach(button => {
     const action = button.dataset.action;
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
         switch (action) {
             case "about":
-                
                 aboutContent();
                 break;
             case "menu":
@@ -29,9 +30,9 @@ changePageButtons.forEach(button => {
                 contactContent();
                 break;
         }
+        updateActiveButton(e.target);
     })
 
 });
 
-aboutContent();
-
+onPageLoad();
