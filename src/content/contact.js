@@ -4,6 +4,8 @@ import render from '../functions/renderContent';
 const createContact = () => {
     const contactDiv = document.createElement("div");
 
+    
+
     return contactDiv;
 }
 
